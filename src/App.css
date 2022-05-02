@@ -7,3 +7,9 @@
   margin: 0;
   padding: 0;
 }
+
+.content_table{
+  box-shadow: -15px 10px 7px #c4c4c6;
+  width: 900px;
+  border-radius: 5px;
+}
