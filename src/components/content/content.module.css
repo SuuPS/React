@@ -1,17 +1,10 @@
 
-.content_bg{
-  position: relative;
-  display: block;
-  top: -700px;
-  left: 340px;
-  width: 100%;
-}
-
-.post_text{
-  font-size: 18px;  
-  color: #404040;
-  display: block;
-  min-width: 100%;
-  min-height: 50px;
-  padding: 10px;
+.content{
+    position: relative;
+    display: block;
+    top: -500px;
+    left: 300px;
+    width: 1000px;
+    padding: 40px 0px 0px 40px;
+    border: 1px solid black;
 }

@@ -1,0 +1,19 @@
+
+.post_text{
+  font-size: 18px;  
+  color: #404040;
+  display: block;
+  min-height: 50px;
+  padding: 10px;
+}
+
+.ava_post{
+  height: 60px;
+  border-radius: 40%;
+}
+
+.post_flex{
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+}
