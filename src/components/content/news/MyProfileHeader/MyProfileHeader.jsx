@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import s from "./MyProfileHeader.module.css"
 
 let MyProfileHeader = () => {
