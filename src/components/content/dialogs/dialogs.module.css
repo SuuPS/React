@@ -6,18 +6,10 @@
 .dialog{
  width: 100px;
  height: 100px;
- background-color: black;
+ border-right: solid 1px black;
 }
 
 .dialog_items{
     display: flex;
     flex-direction: column;
-}
-
-.dialog_users{
-    display: block;
-    background-color: rgb(231, 180, 180);
-    width: 100px;
-    height: 30px;
-    margin: 10px;
 }
