@@ -6,13 +6,17 @@ import Navbar from './components/navbar/navbar';
 import Content from './components/content/content';
 import {  BrowserRouter } from "react-router-dom";
 
-function App() {
+function App(props) {
+
   return (
       <div className="App">
         <BrowserRouter>
           <Header />
           <Navbar />
-          <Content />
+          <Content 
+            posts={props.state.Posts} 
+            dialogList={props.state.DialogGroup} 
+          />
         </BrowserRouter>
       </div>
   );
