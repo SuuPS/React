@@ -4,9 +4,21 @@
 }
 
 .dialog{
- width: 100px;
- height: 100px;
+ width: 500px;
  border-right: solid 1px black;
+ position: relative;
+}
+
+.pushNewMessage{
+    position: fixed; 
+    bottom: 100px;  
+    width: 480px; 
+    flex-direction: column;
+}
+
+.text_area{
+    width: 480px;
+    height: 35px;    
 }
 
 .dialog_items{

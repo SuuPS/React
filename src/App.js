@@ -14,7 +14,9 @@ function App(props) {
           <Header />
           <Navbar />
           <Content 
-            posts={props.state.Posts} 
+            posts={props.state.Posts}
+            addPost = {Posts.addPost} 
+            
             dialogList={props.state.DialogGroup} 
           />
         </BrowserRouter>

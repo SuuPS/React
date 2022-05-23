@@ -9,6 +9,7 @@ let State = {
         MessageData: [
             { message: "Hi" },
             { message: "How are you" },
+            { message: "jusup text" },
         ]
     },
     Posts: [
@@ -16,6 +17,15 @@ let State = {
         { text: "важнейшая тема (на мой скромный взгляд). Важно ЧЁТКО-ЧЁТКО представлять" },
         { text: "Поддержать меня и получить доступ к дополнительному контенту" }
     ]
+}
+
+export let addPost = (postMessage) => {
+
+    let newPost = {
+        text: postMessage    
+    }
+
+    State.Posts.push(newPost)
 }
 
 export default State
