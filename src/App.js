@@ -7,21 +7,21 @@ import Content from './components/content/content';
 import {  BrowserRouter } from "react-router-dom";
 
 function App(props) {
-
   return (
       <div className="App">
         <BrowserRouter>
           <Header />
           <Navbar />
-          <Content 
+          {/* <Content 
             posts={props.state.Posts}
-            addPost = {Posts.addPost} 
+            addPost = {props.addPost} 
             
             dialogList={props.state.DialogGroup} 
-          />
+          /> */}
         </BrowserRouter>
       </div>
   );
 }
+
 
 export default App;

@@ -1,4 +1,6 @@
 
+import {rerenderAnyTree} from "../../render"
+
 let State = {
     DialogGroup: {
         DialogsData: [
@@ -12,11 +14,14 @@ let State = {
             { message: "jusup text" },
         ]
     },
-    Posts: [
-        { text: "Ребята!!! Внимание!!! Пропсы (props)" },
-        { text: "важнейшая тема (на мой скромный взгляд). Важно ЧЁТКО-ЧЁТКО представлять" },
-        { text: "Поддержать меня и получить доступ к дополнительному контенту" }
-    ]
+    ProFilePage: {
+        Posts: [
+            { text: "Ребята!!! Внимание!!! Пропсы (props)" },
+            { text: "важнейшая тема (на мой скромный взгляд). Важно ЧЁТКО-ЧЁТКО представлять" },
+            { text: "Поддержать меня и получить доступ к дополнительному контенту" }
+        ],
+        // newPostText: "it's-your text"
+    }
 }
 
 export let addPost = (postMessage) => {
@@ -25,7 +30,8 @@ export let addPost = (postMessage) => {
         text: postMessage    
     }
 
-    State.Posts.push(newPost)
+    State.ProFilePage.Posts.push(newPost)
+    rerenderAnyTree(State)
 }
 
 export default State

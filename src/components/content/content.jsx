@@ -17,7 +17,7 @@ let Content = (props) => {
                         message={props.dialogList.MessageData}
                         dialogs={props.dialogList.DialogsData} 
                         />} />
-                    <Route path='/News/*' element={<News posts={props.posts}/>}/> 
+                    <Route path='/News/*' element={<News posts={props.posts} addPost={props.addPost}/>}/> 
                 </Routes>
             </div>
     );
