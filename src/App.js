@@ -12,12 +12,12 @@ function App(props) {
         <BrowserRouter>
           <Header />
           <Navbar />
-          {/* <Content 
-            posts={props.state.Posts}
+          <Content 
+            ProFilePage={props.state.ProFilePage}
             addPost = {props.addPost} 
-            
+            changeNewPT = {props.changeNewPT}
             dialogList={props.state.DialogGroup} 
-          /> */}
+          />
         </BrowserRouter>
       </div>
   );

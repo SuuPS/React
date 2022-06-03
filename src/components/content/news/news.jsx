@@ -6,7 +6,10 @@ let News = (props) => {
     let postElement = props.posts.map( p => <Post textInnerHtmlPost={[p.text]}/> )
     return (
         <div className="news">
-            <MyProfileHeader addPost={props.addPost}/>
+            <MyProfileHeader 
+                addPost={props.addPost} 
+                changeNewPT={props.changeNewPT}
+                NewPostText={props.NewsPostText}/>
             <div className={s.content_bg}>
                 {postElement}
             </div>

@@ -1,7 +1,9 @@
+let rerenderAnyTree = () => {
+    console.log(0)
+}
 
-import {rerenderAnyTree} from "../../render"
 
-let State = {
+const State = {
     DialogGroup: {
         DialogsData: [
             { name: "Александр", id: "1" },
@@ -20,18 +22,29 @@ let State = {
             { text: "важнейшая тема (на мой скромный взгляд). Важно ЧЁТКО-ЧЁТКО представлять" },
             { text: "Поддержать меня и получить доступ к дополнительному контенту" }
         ],
-        // newPostText: "it's-your text"
+        NewPostText: "it's-your text"
     }
 }
 
-export let addPost = (postMessage) => {
-
+export const addPost = () => {
     let newPost = {
-        text: postMessage    
+        text: State.ProFilePage.NewPostText    
     }
 
     State.ProFilePage.Posts.push(newPost)
+    State.ProFilePage.NewPostText = ""
     rerenderAnyTree(State)
 }
+
+export const changeNewPT = (postMessage) => {
+
+    State.ProFilePage.NewPostText = postMessage
+    rerenderAnyTree(State)
+}
+
+export const subscribe = (observer) => {
+    rerenderAnyTree = observer
+}
+
 
 export default State

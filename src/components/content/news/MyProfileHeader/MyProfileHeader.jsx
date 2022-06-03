@@ -8,12 +8,12 @@ let MyProfileHeader = (props) => {
 
     let AddPost = () => {
         let textFromPost = newPostElement.current.value
-        props.addPost(textFromPost)  
-        textFromPost = ""
+        props.addPost()  
     }
 
     let onPostChange = () => {
-
+        let text = newPostElement.current.value
+        props.changeNewPT(text)
     }
 
     return (
@@ -23,9 +23,15 @@ let MyProfileHeader = (props) => {
                 <div className={s.profile_flex}>
                     <img className={s.img_profile} src="https://avatars.mds.yandex.net/i?id=cc5999fc85ba867209b4b58016eee4cd-5220968-images-thumbs&n=13"></img>
                     <div className={s.new_post}>
-                        <textarea onChange={ onPostChange } ref={newPostElement} className={s.input_text} 
-                            value={props.newPostText}/>
+
+                        <textarea 
+                            onChange={ onPostChange } 
+                            ref={newPostElement} 
+                            className={s.input_text} 
+                            value={props.NewPostText}/>
+
                         <button onClick={ AddPost } className={s.send_btn}>send</button>
+
                     </div>
                 </div>
             </div>
